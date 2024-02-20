@@ -4,6 +4,74 @@
 * {
     box-sizing: border-box;
   }
+
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+  }
+
+  .fila {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .columna {
+      flex: 1;
+      width: calc(50% - 20px);
+      margin: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  li {
+      margin-bottom: 10px;
+  }
+
+  .profile-picture {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .profile-picture img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+      .columna {
+          width: calc(100% - 20px);
+      }
+  }
   
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
@@ -13,7 +81,7 @@ min-height: 500px;
 }
 
 .izquierda {
-width: 25%;
+width: 15%;
 }
 
 .derecha {
@@ -28,20 +96,16 @@ clear: both;
 }
 
 #c1 {
-    background-color:#aaa;
+    background-color:#e7e7e7;
 }
 
 #c2 {
-    background-color:#bbb;
+    background-color:#e2e3e6;
 }
 
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
-img {
-    width: 100%;
-    height: auto;
-}
 
 .iresponsive {
     padding: 0 6px;
@@ -62,4 +126,12 @@ img {
     }
 }
 
+.fila{
+  display:flex;
+}
+
 /* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
+
+.izquierda, .derecha {
+  border: 10px solid black;
+}

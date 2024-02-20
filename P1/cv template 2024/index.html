@@ -2,50 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Dos columnas</title>
-
-   <!-- Hoja de estilo -->
-   <link rel="stylesheet" href="2c-template.css">    
-
+    <link rel="stylesheet" href="2c-template.css">
 </head>
 <body>
-    
-    <h2>Diseño de plantilla a dos columnas</h2>
+
+    <h2>Práctica 1: Diseño de mi CV</h2>
 
     <div class="fila">
-      <div id="c1" class="columna izquierda">
-        <h2>Columna Izquierda</h2>
-
-        <div class="iresponsive">
-            <img id="imghtml" src="html5.png" alt="html5" width="200" height="200">
+        <div id="c1" class="columna">
+            <h2>Ramón Colillas</h2>
+            <div class="profile-picture">
+                <img src="fotoperfil.jpg" alt="fotoperfil">
+            </div>
+            <ul>
+                <li>Nombre: Ramón Colillas</li>
+                <li>Edad: 35 años</li>
+                <li>Correo Electrónico: ramon.colillas@gmail.com</li>
+                <li>Teléfono: +34 666 777 888</li>
+                <li>Dirección: Calle Mayor, Alcorcón.</li>
+            </ul>
+            <hr>
+            <ul>
+                <li><a href="about.html" class="link">Un poco más sobre mi</a></li>
+            </ul>
+            <hr>
         </div>
 
-        <div class="iresponsive">
-            <img id="imgcss" src="css.png" alt="css" width="200" height="200">
+        <div id="c2" class="columna">
+            <h2>Perfil Profesional:</h2>
+            <p>Ingeniero en Sistemas Audiovisuales y Multimedia con más de 10 años de experiencia en el campo de la tecnología y los medios de comunicación. Apasionado por la innovación y el diseño creativo, con habilidades sólidas en la implementación y gestión de proyectos audiovisuales y multimediales. Capacidad probada para adaptarse a entornos dinámicos y trabajar eficazmente tanto de forma independiente como en equipos multidisciplinarios.</p>
+            <section id="experiencia">
+                <h2>Experiencia Laboral</h2>
+                <ul>
+                    <li>Ingeniero de Proyectos Audiovisuales - Empresa: TechVision Solutions, Duración: 2018 - Presente</li>
+                    <li>Especialista en Multimedia- Empresa: Creativa Media Agency, Duración: 2015 - 2018</li>
+                </ul>
+            </section>
+            <section id="habilidades">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Diseño y edición de vídeo</li>
+                    <li>Programación multimedia (HTML5, CSS, JavaScript)</li>
+                    <li>Gestión de proyectos</li>
+                    <li>Resolución de problemas técnicos</li>
+                    <li>Creatividad y pensamiento innovador</li>
+                    <li>Comunicación efectiva y trabajo en equipo</li>
+                </ul>
+            </section>
+            <section id="Idiomas">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Español - Nativo</li>
+                    <li>Inglés - Avanzado</li>
+                </ul>
+            </section>
         </div>
-
-        <p>Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. 
-            Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, 
-            eirmod tritani debitis nec ea. Cu vis quis gubergren.
-        </p>
-        <ul>
-            <li>Contacto</li>
-            <li>Formación</li>
-            <li>Experiencia</li>
-            <li>Acerca de</li>
-        </ul>
-      </div>
-      <div id="c2" class="columna derecha">
-        <h2>Columna Derecha</h2>
-        <img src="web-tech.png" alt="Tecnologías web">
-        <p>Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. 
-            Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, 
-            eirmod tritani debitis nec ea. Cu vis quis gubergren.
-        </p>
-      </div>
     </div>
-
 </body>
 </html>
