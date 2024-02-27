@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+.section-title {
+    background: linear-gradient(to right, #555, #333);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hobby, .sport {
+    padding: 20px;
+    border: 2px solid #555;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.hobby img, .sport img {
+    width: 250px; /* Tamaño uniforme para todas las imágenes */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Apilar secciones en dispositivos móviles */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+}

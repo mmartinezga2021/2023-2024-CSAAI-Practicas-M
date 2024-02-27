@@ -25,17 +25,19 @@
       width: calc(50% - 20px);
       margin: 10px;
       padding: 20px;
-      background-color: #fff;
+      background-color: #b8b8b8;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  h2 {
-      color: #333;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-  }
+  h1 {
+    text-align: center; /* Para centrar el texto */
+    font-size: 2.3em; /* Tamaño de fuente más grande */
+    font-weight: bolder; /* Para enfatizar el texto */
+    color: #333; /* Color del texto */
+    /* Otras propiedades de estilo según tu preferencia */
+}
+
 
   ul {
       list-style-type: none;
@@ -72,6 +74,16 @@
           width: calc(100% - 20px);
       }
   }
+
+  .about-images {
+    display: flex;
+    justify-content: center;
+}
+
+.about-images img {
+    width: 225px; /* ajusta el tamaño de las imágenes según sea necesario */
+    height: 200px; /* ajusta el tamaño de las imágenes según sea necesario */
+    margin: 5px; /* espacio entre las imágenes */
   
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
