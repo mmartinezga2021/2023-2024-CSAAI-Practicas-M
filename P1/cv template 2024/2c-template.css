@@ -1,6 +1,4 @@
-/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
-/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
-/* Así definimos el comportamiento de caja para todos los elementos */
+
 * {
     box-sizing: border-box;
   }
@@ -31,13 +29,11 @@
   }
 
   h1 {
-    text-align: center; /* Para centrar el texto */
-    font-size: 2.3em; /* Tamaño de fuente más grande */
-    font-weight: bolder; /* Para enfatizar el texto */
-    color: #333; /* Color del texto */
-    /* Otras propiedades de estilo según tu preferencia */
-}
-
+    text-align: center; 
+    font-size: 2.3em; 
+    font-weight: bolder; 
+    color: #333; 
+  }
 
   ul {
       list-style-type: none;
@@ -83,11 +79,11 @@
 }
 
 .about-images img {
-    width: 225px; /* ajusta el tamaño de las imágenes según sea necesario */
-    height: 200px; /* ajusta el tamaño de las imágenes según sea necesario */
-    margin: 5px; /* espacio entre las imágenes */
-  
-/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
+    width: 225px; 
+    height: 200px; 
+    margin: 5px; 
+}
+
 .columna {
 float: left;
 padding: 10px;
@@ -102,7 +98,6 @@ width: 15%;
 width: 75%;
 }
 
-/* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
 content: "";
 display: table;
@@ -117,9 +112,6 @@ clear: both;
     background-color:#e2e3e6;
 }
 
-/* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
-/* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
-
 
 .iresponsive {
     padding: 0 6px;
@@ -127,8 +119,7 @@ clear: both;
     width: 50%;
   }
 
-/* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
-/* Así conseguimos que el contenido se vea bien en dispositvos móviles */
+
 
 @media screen and (max-width: 600px) {
     .columna {
@@ -144,10 +135,9 @@ clear: both;
   display:flex;
 }
 
-/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
+
 
 .izquierda, .derecha {
   border: 10px solid black;
 }
 
-}

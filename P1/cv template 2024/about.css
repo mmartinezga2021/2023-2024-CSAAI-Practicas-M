@@ -27,6 +27,7 @@ main {
     width: 48%;
 }
 
+
 .section-title {
     background: linear-gradient(to right, #555, #333);
     color: #fff;
@@ -46,7 +47,7 @@ main {
 }
 
 .hobby img, .sport img {
-    width: 250px; /* Tamaño uniforme para todas las imágenes */
+    width: 250px; 
     height: auto;
     display: block;
     margin: 0 auto 10px;
@@ -60,13 +61,32 @@ footer {
     text-align: center;
 }
 
-/* Estilos para dispositivos móviles */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
 @media screen and (max-width: 768px) {
     main {
-        flex-direction: column; /* Apilar secciones en dispositivos móviles */
+        flex-direction: column; 
     }
 
     .left-section, .right-section {
-        width: 100%; /* Ancho completo en dispositivos móviles */
+        width: 100%; 
     }
 }
