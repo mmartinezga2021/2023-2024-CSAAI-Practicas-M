@@ -84,6 +84,7 @@
     width: 225px; /* ajusta el tamaño de las imágenes según sea necesario */
     height: 200px; /* ajusta el tamaño de las imágenes según sea necesario */
     margin: 5px; /* espacio entre las imágenes */
+    overflow-x: auto;
   
 /* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
 .columna {
