@@ -1,11 +1,89 @@
-/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
-/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
-/* Así definimos el comportamiento de caja para todos los elementos */
+
 * {
     box-sizing: border-box;
   }
-  
-/* Crear columnas de ancho diferente que se colocan una a continuación de la otra */
+
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+  }
+
+  .fila {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .columna {
+      flex: 1;
+      width: calc(50% - 20px);
+      margin: 10px;
+      padding: 20px;
+      background-color: #b8b8b8;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center; 
+    font-size: 2.3em; 
+    font-weight: bolder; 
+    color: #333; 
+  }
+
+  ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  li {
+      margin-bottom: 10px;
+  }
+
+  .profile-picture {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .profile-picture img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+      .columna {
+          width: calc(100% - 20px);
+      }
+  }
+
+  .about-images {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap; 
+}
+
+.about-images img {
+    width: 225px; 
+    height: 200px; 
+    margin: 5px; 
+}
+
 .columna {
 float: left;
 padding: 10px;
@@ -13,14 +91,13 @@ min-height: 500px;
 }
 
 .izquierda {
-width: 25%;
+width: 15%;
 }
 
 .derecha {
 width: 75%;
 }
 
-/* Clear floats despues de las columnas para eliminar la superposición */
 .filla:after {
 content: "";
 display: table;
@@ -28,20 +105,13 @@ clear: both;
 }
 
 #c1 {
-    background-color:#aaa;
+    background-color:#e7e7e7;
 }
 
 #c2 {
-    background-color:#bbb;
+    background-color:#e2e3e6;
 }
 
-/* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
-/* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
-
-img {
-    width: 100%;
-    height: auto;
-}
 
 .iresponsive {
     padding: 0 6px;
@@ -49,8 +119,7 @@ img {
     width: 50%;
   }
 
-/* Responsive layout - cuando el ancho de pantalla es menor a 600px, muestra las columnas apiladas. */
-/* Así conseguimos que el contenido se vea bien en dispositvos móviles */
+
 
 @media screen and (max-width: 600px) {
     .columna {
@@ -62,4 +131,13 @@ img {
     }
 }
 
-/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
+.fila{
+  display:flex;
+}
+
+
+
+.izquierda, .derecha {
+  border: 10px solid black;
+}
+
