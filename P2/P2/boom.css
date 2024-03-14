@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #006400;  /* Fondo de la pantalla entera verde oscuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Altura completa de la ventana del navegador */
+    margin: 0;  /* Elimina los márgenes predeterminados */
+    background-image: url(fondobomba.jpg);
+    background-size:cover  ;  /* Cambia de 'cover' a 'auto' */
+    background-position: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Estilo general del contenedor del juego */
+#game-container {
+    background-color: #1a1a1a;  /* Fondo oscuro para resaltar los colores */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff4500;  /* Sombra naranja para un efecto de 'alarma' */
+    border: 10px  #ff0202;  /* Borde discontinuo para añadir estilo */
+}
+
+/* Estilo del display del cronómetro */
+#display {
+    color: #37f037;  /* Verde brillante para el tiempo */
+    font-size: 48px;  /* Tamaño de fuente más grande para mejor visibilidad */
+    margin-bottom: 20px;
+    border: 3px solid #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #333;  /* Fondo más oscuro para contraste */
+    text-shadow: 0 0 10px #37f037;  /* Sombra de texto para efecto 'neón' */
+}
+
+/* Estilo de la clave secreta */
+#clave_secreta {
+    font-size: 30px;  /* Tamaño de fuente más grande para la clave */
+    margin-bottom: 20px;
+    border: 3px solid #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #333;  /* Fondo más oscuro para contraste */
+    color: #ff4500;  /* Color naranja para la clave, asociado con 'peligro' */
+}
+
+#botones {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantiene los botones en una cuadrícula de 3x4 */
+    gap: 5px;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 18px; /* Tamaño de fuente adecuado para los botones */
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Bordes redondeados para un aspecto suave */
+    background-color: #4b6cff; /* Color azul para los botones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
+}
+
+button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    box-shadow: 0 0 20px #4b6cff; /* Sombra azul brillante para destacar */
+}
+
+button:active {
+    transform: scale(0.9); /* Disminuye el tamaño al hacer clic */
+    box-shadow: 0 0 15px #ff4500; /* Sombra naranja para efecto 'presionado' */
+}
+
+
+/* Estilo de los dígitos de la clave */
+#clave span {
+    color: #ff4500;  /* Color naranja para los dígitos, asociado con 'peligro' */
+    font-size: 60px;  /* Tamaño de fuente más grande para destacar */
+    border: 1px solid #333;
+    padding: 15px 15px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #1a1a1a;  /* Fondo oscuro para resaltar los dígitos */
+    box-shadow: 0 0 10px #ff4500;  /* Sombra naranja para efecto 'neón' */
+}
+
+#clave span.correct {
+    color: #37f037;  /* Verde para indicar el dígito correcto */
+    box-shadow: 0 0 10px #37f037;  /* Sombra verde para efecto 'neón' */
+}
