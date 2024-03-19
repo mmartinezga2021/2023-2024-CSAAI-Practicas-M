@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adivina la Clave</title>
+<link rel="stylesheet" href="boom.css">
+<script src="crono.js" defer></script>
+</head>
+<body>
+    <div id="game-container">
+        <p id="display"> 0:0:0</p>
+        <div id="clave_secreta">
+            <span id="clave"></span>
+        </div>
+        <div id="botones">
+            <button id="1" onclick="adivinar(1)">1</button>
+            <button id="2" onclick="adivinar(2)">2</button>
+            <button id="3" onclick="adivinar(3)">3</button>
+            <button id="4" onclick="adivinar(4)">4</button>
+            <button id="5" onclick="adivinar(5)">5</button>
+            <button id="6" onclick="adivinar(6)">6</button>
+            <button id="7" onclick="adivinar(7)">7</button>
+            <button id="8" onclick="adivinar(8)">8</button>
+            <button id="9" onclick="adivinar(9)">9</button>
+            <button id="*" onclick="adivinar('*')">*</button>
+            <button id="0" onclick="adivinar(0)">0</button>
+            <button onclick="adivinar('/')">/</button>      
+            <button type="button" id="start">Start</button>
+            <button type="button" id="stop">Stop</button>
+            <button type="button" id="reset">Reset</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
