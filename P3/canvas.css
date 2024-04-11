@@ -2,10 +2,10 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111; /* Fondo oscuro para modo nocturno */
+  background-color: #111; /* Fondo oscuro */
 }
 
-/* Estilo del canvas con efecto de partículas en el fondo */
+/* Estilo del canvas */
 canvas {
     min-height: 100%;
     background-image: url('espacio.jpg');
@@ -13,11 +13,11 @@ canvas {
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 10px; /* Bordes redondeados */
-    display: block; /* Evita margenes extra alrededor del canvas */
+    display: block; /* Evita margenes extra */
     margin: 20px auto; /* Centrado con margen */
 }
 
-/* Estilo de los controles con un toque de neón y más grandes */
+/* Estilo de los controles  */
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -31,8 +31,8 @@ input[type=range] {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 50px; /* Deslizador más grande */
-  height: 50px; /* Deslizador más grande */
+  width: 25px; 
+  height: 25px; 
   border-radius: 50%;
   background: #0f0; /* Color neón para el deslizador */
   cursor: pointer;
@@ -80,7 +80,7 @@ h2, p, label {
   position: absolute;
   top: 5%; /* Posición desde la parte superior */
   left: 5%; /* Posición desde el lado izquierdo */
-  transform: scale(1.1); /* Escala ligeramente más grande */
+  transform: scale(1.1); /* Escala más grande */
   transition: transform 0.5s ease; /* Transición suave para la transformación */
   z-index: 10;
 }
@@ -95,7 +95,7 @@ h2, p, label {
   font-size: 2em; /* Tamaño de fuente más grande */
   color: #d9534f; /* Color rojo para fallo */
   background-color: #333; /* Fondo oscuro */
-  padding: 15px; /* Espaciado interno más grande */
+  padding: 15px; 
   border-radius: 10px; /* Bordes redondeados */
   position: absolute;
   top: 5%; /* Posición desde la parte superior */
@@ -129,8 +129,8 @@ h2, p, label {
 }
 
 .proyectil {
-  background: url('icono-cohete.png') no-repeat center center; /* Asegúrate de tener un icono de cohete */
+  background: url('icono-cohete.png') no-repeat center center; 
   width: 50px; /* Ancho del cohete */
   height: 100px; /* Alto del cohete */
-  display: block; /* As
+  display: block; 
 }

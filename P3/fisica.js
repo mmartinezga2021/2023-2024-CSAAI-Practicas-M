@@ -2,14 +2,12 @@ console.log("Ejecutando JS...");
 
 const canvas = document.getElementById("canvas");
 
-//-- Definir el tamaño del canvas
+//-- Tamaño del canvas
 canvas.width = 1000;
 canvas.height = 500;
 
-//-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
 
-//-- Posición del elemento a animar
 let x = 30;
 let y = 400;
 let tiempo = 0;
@@ -43,12 +41,11 @@ const inicioButton = document.getElementById("inicio");
 //-- Función principal de animación
 function update() 
 {
-  //-- Algoritmo de animación:
-  //-- 1) Actualizar posiciones de los elementos
+
   if (disparado) {
     x += velx;
-    y -= vely; // Ajuste para la gravedad
-    vely -= 0.2 ; // Ajuste para la gravedad en la velocidad vertical
+    y -= vely; 
+    vely -= 0.2 ;
 
     //-- Comprobar si el proyectil ha salido del canvas
     if (x > canvas.width) {
@@ -103,25 +100,22 @@ function update()
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Dibujar la imagen del cohete en lugar del rectángulo
   if (imgCohete.complete) {
-    ctx.drawImage(imgCohete, x, y, 50, 50); // Asegúrate de que el tamaño de la imagen sea el adecuado
+    ctx.drawImage(imgCohete, x, y, 50, 50); 
   } else {
     imgCohete.onload = function () {
       ctx.drawImage(imgCohete, x, y, 20, 20);
     };
   }
 
-  // Dibujar la imagen de la luna en lugar del círculo
   if (imgLuna.complete) {
-    ctx.drawImage(imgLuna, objetivoX, objetivoY, 80, 50); // Asegúrate de que el tamaño de la imagen sea el adecuado
+    ctx.drawImage(imgLuna, objetivoX, objetivoY, 80, 50);
   } else {
     imgLuna.onload = function () {
       ctx.drawImage(imgLuna, objetivoX, objetivoY, 20, 20);
     };
   }
 
-  // Volver a ejecutar update cuando toque
   requestAnimationFrame(update);
 }
 
@@ -136,7 +130,7 @@ disparoButton.addEventListener("click", function() {
 
     disparado = true;
     sonidoDisparo.play();
-    juegoTerminado = true; // Indica que el juego ha terminado
+    juegoTerminado = true; 
 
     cronometro = setInterval(function() {
       tiempo++;
@@ -148,9 +142,7 @@ disparoButton.addEventListener("click", function() {
   }
 });
 
-// Y finalmente, modifica el evento del botón de inicio para reiniciar el juego
 inicioButton.addEventListener("click", function() {
-  // Aquí puedes añadir la lógica para reiniciar el juego
   disparado = false;
   tiempo = 0;
   x = 30;
@@ -162,7 +154,6 @@ inicioButton.addEventListener("click", function() {
   resultadoDisplay.textContent = "";
   juegoTerminado = false; // Reinicia el estado del juego
   resultadoDisplay.classList.remove('acertado');
-  resultadoDisplay.classList.remove('fallo'); // Elimina la clase que pueda estar interfiriendo // Elimina la clase que pueda estar interfiriendo
+  resultadoDisplay.classList.remove('fallo'); // 
 });
-//-- ¡Que empiece la función!
 update();
