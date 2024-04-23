@@ -1,0 +1,215 @@
+/* Estilos generales */
+body {
+    font-size: 2vw; /* Tamaño de fuente adaptable */
+    background-image: url('background.jpg'); /* Ruta a tu imagen de fondo */
+    background-position: center;
+    
+    
+    
+}
+
+/* Estilos para el contenedor del juego */
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #000000, #434343);
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    width: 90vw;
+    height: 90vh;
+    max-width: 600px;
+    overflow: auto;
+}
+
+/* Estilos para los botones */
+button {
+    cursor: pointer;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.7em;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffecb3;
+}
+
+button:disabled,
+button.disabled {
+    background-color: #757575;
+    cursor: not-allowed;
+}
+
+/* Estilos para el tablero del juego */
+#board {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%; /* Asegura que el tablero se ajuste al contenedor */
+}
+
+/* Estilos para las cartas */
+.card {
+    perspective: 1000px;
+    background-color: #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    visibility: hidden;
+    animation: drop 0.5s ease forwards;
+    animation-delay: calc(var(--card-index) * 0.1s);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.5; /* Ajusta la opacidad según tus preferencias */
+    z-index: -1; /* Coloca la capa de fondo detrás de los emojis */
+}
+
+.card-front {
+    background-image: url('fondocartas.jpeg'); 
+    
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}
+
+.card-back {
+    background-image: url('fondocartasalante.jpg'); /* Reemplaza con la ruta a la imagen de fondo */    transform: rotateY(180deg);
+    font-size: calc(1em - 10px); /* Ajusta el tamaño de la fuente de los emojis */   
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji {
+    /* ...otros estilos... */
+    color: #ffd700; /* Color dorado para los emojis */
+    text-shadow:
+        0 0 6px rgba(255, 215, 0, 0.8), /* Brillo dorado */
+        0 0 10px rgba(255, 215, 0, 0.8); /* Brillo más intenso */
+}
+
+
+
+@keyframes spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+}
+
+.card.flipped .card-inner {
+    animation: spin 0.6s forwards;
+}
+
+#victory-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #01ff6b; /* Color verde */
+    color: #000000; /* Texto blanco */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    z-index: 1; /* Asegura que el mensaje de victoria se muestre por encima de las cartas */
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.8); /* Sombra suave */
+    animation: fadeIn 0.5s ease forwards; /* Animación de aparición */
+}
+
+#victory-message.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Asegúrate de remover la animación una vez que la carta está en su lugar para evitar que se repita */
+.card.flipped .card-inner,
+.card.matched .card-inner {
+    animation: none;
+}
+
+#display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #ffd700;
+    font-size: 1.5em;
+}
+
+#moves,
+#timer {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.5em; /* Reduce el tamaño de la fuente */
+    padding: 5px;
+    border-radius: 2px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 4vw; /* Tamaño de fuente más grande para pantallas pequeñas */
+    }
+}
