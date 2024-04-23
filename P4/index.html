@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+    <audio id="ganar-sound" src="ganar.mp3"></audio>
+    <audio id="acertar-sound" src="acertar.mp3"></audio>
+    <audio id="fallo-sound" src="fallo.mp3"></audio>
+
+
+    <div class="game">
+        <button id="start">Comenzar</button>
+        <button id="reset">Reiniciar</button>
+        <select id="dimensions">
+            <option value="2">Fácil</option>
+            <option value="4">Intermedio</option>
+            <option value="6">Difícil</option>
+        </select>
+        <div id="display">
+            <div id="moves">0 movimientos</div>
+            <div id="timer">tiempo: 0 sec</div>
+            <div id="victory-message" class="hidden"></div>
+        </div>
+        <div id="board"></div>
+    </div>
+    <script src="memory-game.js"></script>
+</body>
+</html>
