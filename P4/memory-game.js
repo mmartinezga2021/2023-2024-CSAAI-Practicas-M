@@ -7,7 +7,6 @@ let cards = [];
 let flippedCards = [];
 let victoryMessage = document.getElementById('victory-message');
 
-// Define your set of slot machine emojis
 let emojis = ['🍒', '🍋', '🍊', '🍇', '🍉', '🍓', '🍑', '🍈', '🍌', '🍐', '🍍', '🥥', '🥝', '🍅', '🍆', '🌽', '🥕', '🌶️', '🥒', '🥬'];
 
 document.getElementById('start').addEventListener('click', startGame);
