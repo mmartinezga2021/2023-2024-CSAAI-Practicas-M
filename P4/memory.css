@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-size: 2vw; /* Tamaño de fuente adaptable */
-    background-image: url('background.jpg'); /* Ruta a tu imagen de fondo */
+    background-image: url('background.jpg'); 
     background-position: center;
     
     
