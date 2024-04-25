@@ -49,6 +49,26 @@ button.disabled {
     cursor: not-allowed;
 }
 
+
+/* Estilos para el selector de dimensiones */
+#dimensions {
+    cursor: pointer;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.6em; /* Ajusta el tamaño de la fuente según tus preferencias */
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+#dimensions:hover {
+    background-color: #ffecb3;
+}
+
+
 /* Estilos para el tablero del juego */
 #board {
     display: grid;

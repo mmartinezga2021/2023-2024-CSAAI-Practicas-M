@@ -13,6 +13,7 @@ let emojis = ['🍒', '🍋', '🍊', '🍇', '🍉', '🍓', '🍑', '🍈', '�
 document.getElementById('start').addEventListener('click', startGame);
 document.getElementById('reset').addEventListener('click', resetGame);
 
+
 function startGame() {
     if (gameStarted) return;
     gameStarted = true;
