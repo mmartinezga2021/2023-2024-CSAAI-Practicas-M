@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+canvas {
+  border: 1px solid black;
+}
+
+
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+button {
+  background: #282A3A;
+  color: #FFF;
+  border-radius: 20px; /* Increase border radius for rounder buttons */
+  padding: 10px 20px;
+  border: 0;
+  cursor: pointer;
+  font-family: Fredoka;
+  font-size: 18pt;
+  transition: background 0.3s ease; /* Transition effect for button hover */
+}
+
+button:hover {
+  background: #43455C; /* Darken button background on hover */
+}
+
+#display {
+  background: #fff; /* White background for the display div */
+  border-radius: 5px; /* Rounded corners for the display div */
+  padding: 10px; /* Padding inside the display div */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for the display div */
+  margin-bottom: 20px; /* Margin below the display div */
+}
+
+#display p {
+  border: 1px solid #ddd; /* Border around each paragraph */
+  padding: 10px; /* Padding inside each paragraph */
+  margin-bottom: 10px; /* Margin below each paragraph */
+}
